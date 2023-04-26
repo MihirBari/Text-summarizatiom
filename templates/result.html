@@ -29,19 +29,19 @@
 
             <form class="form" action="/summarize" method="post" enctype="multipart/form-data">
                 <div class="card-body">
-                    <h5 class="card-title">Add Text To Summarization</h5>
-                    <div class="input-group">
-                        <textarea class="form-control" rows="20" cols="150" id="addTxt" name="inputText"
-                            aria-label="With textarea" minlength="128" required></textarea>
+                    <h5 class="card-title">Orignal Text</h5>
+                    <div class="input-group box" rows="20" cols="150"  >
+                         {{ text }}
                     </div>
-                    <button type="submit" value="text" class="btn btn-primary my-2" id="addBtn">Summarize</button>
                 </div>
             </form>
-            <div id="notes" class="row container-fluid">
+            <div id="notes" class="row container-fluid result">
                 <H4>Your summarized Text</H4>
-                
+                {{ summarized_text }}
             </div>
         </div>
+        <button type="reset" value="text" class="btn btn-primary my-2 bb"  ><a href="/"  >Back to Summarize</a></button>
 </body>
-<script src="{{ url_for('static', filename='js/script.js') }}" ></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script src="index.html"></script>
 </html>
