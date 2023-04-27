@@ -97,7 +97,11 @@ nav {
 }
 
 .bb{
-    color: #fff;
+    text-decoration: none;
+    color: antiquewhite;
+}
+.bb :hover{
+    color: antiquewhite;
 }
 
 .box{

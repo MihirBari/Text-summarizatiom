@@ -33,7 +33,7 @@ def summarize():
                           "num_beams": 8, "max_length": 128}
             model_sum = model(text, **gen_kwargs)[0]["summary_text"]
             print(model_sum)
-            return render_template('result.html',text=' {}'.format(text)  ,summarized_text=' {}'.format(model_sum))
+            return render_template('index.html',text=' {}'.format(text)  ,summarized_text=' {}'.format(model_sum))
         else:
             return render_template("index.html")
 
